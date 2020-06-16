@@ -1,0 +1,329 @@
+:root {
+    font-family: exo;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+}
+
+:root {
+    --red-col: #eb0d2b;
+    --yellow-col: #ffe424;
+    --blue-col: #0e24f3;
+    --orange-col: #ff7f00;
+    --cyan-col: #2ae7ca;
+    --pink-col: #ee2cb1;
+    --purple-col: #540de6;
+    --green-col: #00c458;
+}
+
+header {
+    width: 100%;
+    background: black;
+    height: 15vh;
+    color: white;
+    text-align: center;
+}
+
+header a {
+    width: 100%;
+    height: 15vh;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+a:hover {
+    border-bottom: 1vh solid black;
+}
+
+h1 {
+    padding-top: 1rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 10vh;
+}
+
+ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    width: 92%;
+}
+
+ul li {
+    list-style: none;
+    display: block;
+    padding: 0.5rem;
+    font-size: x-large;
+    font-family: "exo";
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.bass-pad,
+.snare-pad,
+.hihat-pad {
+    width: 3.8rem;
+    height: 3.8rem;
+    margin: 1rem 0.5rem;
+    border: 1rem solid black;
+    position: relative;
+}
+
+.hihat-pad {
+    margin-bottom: none;
+}
+
+.active {
+    background: black;
+}
+
+.hihat-track,
+.snare-track,
+.bass-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bass,
+.snare,
+.hihat {
+    display: flex;
+}
+.pads {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+    color: (rgb(147, 147, 147));
+    padding: 0.2rem;
+    transform: translateY(-1vh);
+}
+.controls button {
+    padding: 0.8rem;
+    font-family: exo;
+    border: none;
+    background: black;
+    color: rgb(203, 203, 203);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transform: translateY(-2vh);
+}
+
+.tempo {
+    margin: 1rem;
+    width: 30%;
+}
+.tempo-bar {
+    padding: 0.1rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(88, 88, 88);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.tempo p {
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+@keyframes playTrack {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.foot {
+    color: black;
+    background: white;
+    background-color: white;
+    padding-block: 1px;
+    padding: 0;
+    max-height: 20%;
+    width: 82%;
+    transform: translateX(20%);
+}
+
+#tempo-words {
+    transform: translateY(-3vh);
+}
+
+.play {
+    padding-left: 10rem;
+}
+
+h2 .instrument {
+    color: black;
+}
+
+.lock {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0.6rem;
+    color: transparent;
+    background-color: transparent;
+    background: transparent;
+}
+
+/* Make elements focusable */
+button:focus,
+input:focus,
+a:focus {
+    outline: 2px solid darkorange;
+    outline-offset: 3px;
+}
+
+/* removing the ugly automated inner mozilla focus ring */
+::-moz-focus-inner {
+    border: none;
+}
+
+.maybe {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0.6rem;
+    color: rgba(180, 180, 180, 0.3);
+    background-color: transparent;
+    background: transparent;
+}
+
+#locked {
+    color: grey;
+}
+
+.instrument {
+    vertical-align: center;
+    padding: 1rem;
+    transform: translateY(1.5rem);
+    font-size: 2rem;
+    color: black;
+}
+
+#popup-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#popup-main {
+    position: fixed;
+    width: 700px;
+    height: 520px;
+    border: 1rem solid black;
+    left: 50%;
+    margin-left: -350px;
+    background-color: white;
+    top: 50%;
+    margin-top: -220px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#close-popup {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 0.2rem solid black;
+    text-align: center;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#close-popup p {
+    margin-top: 0px;
+    text-align: center;
+    font-family: exo;
+    font-size: 20px;
+}
+
+.beatLib {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    /* padding-bottom: 1rem; */
+    padding-right: 5rem;
+}
+
+.beat-btn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transform: translateY(-0.5rem);
+    font-family: exo;
+    border: none;
+    background: black;
+    color: rgb(203, 203, 203);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#legend-main ul {
+    display: relative;
+    width: 10%;
+    margin-left: 2%;
+    transform: translateY(-26vh);
+}
+
+.minipad {
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem 0.5rem;
+    border: 0.5rem solid black;
+    position: relative;
+}
+
+#legend-tags {
+    font-size: 1.5rem;
+    transform: translateY(1rem);
+}
+
+#on-leg {
+    background: black;
+}
+
+#off-tag {
+    transform: translateY(0.9rem);
+}
+
+#lock-tag {
+    transform: translateY(1.8rem);
+}
+
+#lock-leg {
+    font-size: 1.5rem;
+    margin: 0.6rem;
+    transform: translate(0.2rem, -0.3rem);
+    border: transparent;
+}

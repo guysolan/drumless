@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="plan-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <title>Plan your Beats</title>
+  </head>
+  <body>
+    <header role="banner">
+      <h1 id="main-title">Drumless</a></h1>
+    </header>
+    <div role="navigation" class="subheadings">
+      <ul>
+        <li class="subheading" id="Practice">
+          <a href="index.html">Drum Kit</a>
+        </li>
+        <li class="subheading" id="plan"><a href="plan.html">Generator</a></li>
+  
+      </ul>
+    </div>
+    <main role="main">
+      <div class="bass-track">
+        <div class="pads">
+        </div>
+        <div class="bass">
+          <h2 class = "instrument">Bass </h2>
+          <div class="pad bass-pad b0"><button tabindex=0 aria-label="b0" class="lock b 0"><i class="fas fa-lock"></i></div>
+          <div id="locked" class="pad bass-pad b1"><button id="locked" tabindex=0 aria-label="b1" class="lock b 1"><i class="fas fa-lock"></i></div>
+          <div class="pad bass-pad b2"><button aria-label="b2"  class="lock b 2"><i class="fas fa-lock"></i></div>
+          <div  class="pad bass-pad b3"><button  aria-label="b3"  class="lock b 3"><i class="fas fa-lock"></i></div>
+          <div class="pad bass-pad b4"><button aria-label="b4" class="lock b 4"><i class="fas fa-lock"></i></div>
+          <div class="pad bass-pad b5"><button aria-label="b5"  class="lock b 5"><i class="fas fa-lock"></i></div>
+          <div class="pad bass-pad b6"><button aria-label="b6"  class="lock b 6"><i class="fas fa-lock"></i></div>
+          <div id="locked" class="pad bass-pad b7"><button id="locked" aria-label="b7"  class="lock b 7"><i class="fas fa-lock"></i></div>
+        </div>
+        <div class="pads">
+        </div>
+      </div>
+      <div class="snare-track">
+        <div class="pads">
+        </div>
+        <div  class="snare">
+          <h2 class = "instrument">Snare</h2>
+          <div class="pad snare-pad b0"><button aria-label="s0" class="lock s 0"><i class="fas fa-lock"></i></div>
+          <div class="pad snare-pad b1"><button aria-label="s1" class="lock s 1"><i class="fas fa-lock"></i></div>
+          <div class="pad snare-pad b2"><button aria-label="s2"  class="lock s 2"><i class="fas fa-lock"></i></div>
+          <div id="locked" class="pad snare-pad b3"><button id="locked" aria-label="s3" class="lock s 3"><i class="fas fa-lock"></i></div>
+          <div class="pad snare-pad b4"><button aria-label="s4" class="lock s 4"><i class="fas fa-lock"></i></div>
+          <div class="pad snare-pad b5"><button aria-label="s5" class="lock s 5"><i class="fas fa-lock"></i></div>
+          <div id="locked" class="pad snare-pad b6"><button id="locked" aria-label="s6" class="lock s 6"><i class="fas fa-lock"></i></div>
+          <div class="pad snare-pad b7"><button aria-label="s7" class="lock s 7"><i class="fas fa-lock"></i></div>
+        </div>
+        <div class="pads">
+        </div>
+      </div>
+      <div class="hihat-track">
+        <div class="pads">
+        </div>
+        <div  class="hihat">
+          <h2 class = "instrument">Hihat </h2>
+          <div class="pad hihat-pad b0"><button aria-label="h0" class="lock h 0"><i class="fas fa-lock"></i></div>
+          <div id="locked" class="pad hihat-pad b1"><button id = "locked" aria-label="h1" class="lock h 1"><i class="fas fa-lock"></i></div>
+          <div class="pad hihat-pad b2"><button aria-label="h2" class="lock h 2"><i class="fas fa-lock"></i></div>
+          <div class="pad hihat-pad b3"><button aria-label="h3"class="lock h 3"><i class="fas fa-lock"></i></div>
+          <div id="locked" class="pad hihat-pad b4"><button id="locked" aria-label="h4"class="lock h 4"><i class="fas fa-lock"></i></div>
+          <div class="pad hihat-pad b5"><button aria-label="h5"class="lock h 5"><i class="fas fa-lock"></i></div>
+          <div id="locked" class="pad hihat-pad b6"><button id="locked" aria-label="h6"class="lock h 6"><i class="fas fa-lock"></i></div>
+          <div class="pad hihat-pad b7"><button aria-label="h7"class="lock h 7"><i class="fas fa-lock"></i></div>
+        </div>
+        <div class="pads">
+        </div>
+      </div>
+    </main>
+      <footer class="foot">
+        <div class="controls">
+          <button id="play" class="play">Play</button>
+          <button id="randomise" class="randomise">Randomise</button>
+          <button id="save" class="save">Save</button>
+          <button id="find" class="find">Find</button>
+          <div class="tempo">
+            <input 
+              aria-label="Search"
+              type="range"
+              class="tempo-bar"
+              max="220"
+              min="60"
+              value="120"
+            />
+            <p id="tempo-words">Tempo: <span class="tempo-nr">120</span></p>
+          </div>
+      </footer>
+      </div>
+    </div>
+
+    <div id="legend-wrapper">
+      <div id="legend-main">
+        <ul>
+          <li>
+        <div class="minipad" id="on-leg"></div>
+        <div class="minipad" id="off-leg"></div>
+        <div class="minipad" id="lock-leg"><i class="fas fa-lock"></i></div>
+
+
+      </li>
+      <li id="legend-tags">
+        <div id="on-tag">Hit</div>
+        <div id="off-tag">Rest</div>
+        <div id="lock-tag">Lock</div>
+        </li>
+      </div>
+    </div>
+
+    <div id="popup-wrapper">
+      <div id="popup-main">
+        <div id="close-popup">
+          <p>
+            X
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <audio preload="auto" class="bass-sound" src="./audio/bass-trim.ogg"></audio>
+    <audio preload="auto" class="snare-sound" src="./audio/snare-trim.ogg"></audio>
+    <audio preload="auto" class="hihat-sound" src="./audio/hihat-808.ogg"></audio>
+
+
+    <script type="module" src="./plan.js"></script>
+  </body>
+</html>

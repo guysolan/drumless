@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.png">
+    <script type="module" src="practice.js"></script>
+    <title>Find your Groove</title>
+  </head>
+  <body>
+    <header role="banner">
+      <h1 id="main-title">Drumless</a></h1>
+    </header>
+    <div role="navigation" class="subheadings">
+      <ul>
+        <li class="subheading" id="practice">
+          <a href="index.html">Drum Kit</a>
+        </li>
+        <li class="subheading" id="plan"><a href="plan.html">Generator</a></li>
+      </ul>
+    </div>
+    <footer>
+      <ul class="keys">
+        <li class="key" data-key="90">Z = Ride</li>
+        <li>|</li>
+        <li class="key" id="open-hats" data-key="88">X = Open Hihat</li>
+        <li>|</li>
+        <li class="key" id="closed-hats" data-key="67">C = Closed Hihat</li>
+        <li>|</li>
+        <li class="key" id="snare" data-key="86">V = Snare</li>
+        <li>|</li>
+        <li class="key" id="bass" data-key="32">SPACE = Bass</li>
+        <li>|</li>
+        <li class="key" id="hi-tom" data-key="66">B = Hi Tom</li>
+        <li>|</li>
+        <li class="key" id="mid-tom" data-key="78">N = Mid Tom</li>
+        <li>|</li>
+        <li class="key" id="low-tom" data-key="77">M = Low Tom</li>
+      </ul>
+    </footer>
+
+    <audio preload="auto" src="./audio/ride.wav" data-key="90"></audio>
+    <audio preload="auto" src="./audio/openhat-acoustic01.wav" data-key="88"></audio>
+    <audio preload="auto" src="./audio/hihat-acoustic02.wav" data-key="67"></audio>
+    <audio preload="auto" src="./audio/DWMapSnA3Cpp3.wav" data-key="86"></audio>
+    <audio preload="auto" src="./audio/yamkickA3SEQ2ff12.wav" data-key="32"></audio>
+    <audio preload="auto" src="./audio/thintom10A3NSmf3.wav" data-key="66"></audio>
+    <audio preload="auto" src="./audio/thintom12A3NSmp3.wav" data-key="78"></audio>
+    <audio preload="auto" src="./audio/thintom15A3NSmf3.wav" data-key="77"></audio>
+
+    <div role="main">
+      <canvas
+        aria-label="layer3"
+        class="layer-3"
+        alt="drumkit layer 3"
+        style="z-index: 0; position: absolute;"
+      ></canvas>
+      <canvas
+        aria-label="layer1"
+        class="layer-1"
+        alt="drumkit layer 1"
+        style="z-index: 2; position: absolute;"
+      ></canvas>
+      <canvas
+        aria-label="layer2"
+        class="layer-2"
+        alt="drumkit layer 2"
+        style="z-index: 1; position: absolute;"
+      ></canvas>
+    </div>
+    <script type="module" src="drums.js"></script>
+    <script type="module"  src="drums-2.js"></script>
+    <script type="module" src="drums-3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --red-col: #eb0d2b;
+  --yellow-col: #ffe424;
+  --blue-col: #0e24f3;
+  --orange-col: #ff7f00;
+  --cyan-col: #2ae7ca;
+  --pink-col: #ee2cb1;
+  --purple-col: #540de6;
+  --green-col: #00c458;
+}
+
+header {
+  width: 100%;
+  background: black;
+  height: 15vh;
+  color: white;
+  text-align: center;
+}
+
+header a {
+  width: 100%;
+  height: 15vh;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+h1 {
+  padding-top: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 10vh;
+}
+
+ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 92%;
+}
+
+ul li {
+  list-style: none;
+  display: block;
+  padding: 0.5rem;
+  font-size: x-large;
+  font-family: "exo";
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+a:hover {
+  border-bottom: 1vh solid black;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+footer ul li {
+  font-size: 3vh;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.open-hats {
+  color: var(--orange-col);
+}
+
+.closed-hats,
+.hihat {
+  color: var(--blue-col);
+}
+
+.ride {
+  color: var(--green-col);
+}
+
+.snare {
+  color: var(--yellow-col);
+}
+
+.bass {
+  color: var(--red-col);
+}
+
+.hi-tom {
+  color: var(--cyan-col);
+}
+
+.mid-tom {
+  color: var(--pink-col);
+}
+
+.low-tom {
+  color: var(--purple-col);
+}
+
+.key {
+  transition: all 0.1s;
+}
+
+.playing {
+  transform: scale(1.15);
+}
